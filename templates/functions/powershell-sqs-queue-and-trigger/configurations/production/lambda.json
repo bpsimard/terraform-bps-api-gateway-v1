@@ -1,0 +1,14 @@
+{
+    "function_name": null,
+    "function_description": "",
+    "runtime": "dotnetcore3.1",
+    "filename": "lambda.ps1",
+    "handler": "index.handler",
+    "log_retention_in_days": 14,
+    "attach_network_policy": true,
+    "vpc_subnet_ids": null,
+    "vpc_security_group_ids": null,
+    "policy": null
+}
+
+

@@ -1,0 +1,24 @@
+{
+    "default": {
+        "name": "default",
+        "description": "Default usage plan for the deployment",
+        "product_code": "",
+        "stages": {
+            "production":
+            {
+                "name": "prod",
+                "api_gateway_key": "tcf-service"
+            }
+    },
+    "uages_plan_key_associations": {
+        "terraform": {
+            "api_key_id": "fvo3rmh7ob"
+        },
+        "production_terraform": {
+            "api_key_id": "z81o8vignj"
+        } 
+    },
+    "quota_settings": {},
+    "throttle_settings": {}
+    }
+}

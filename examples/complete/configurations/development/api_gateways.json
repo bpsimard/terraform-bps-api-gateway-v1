@@ -1,0 +1,10 @@
+{
+    "api-service" : {
+        "name": null,
+        "description": "",
+        "endpoint_configuration": {
+            "types": ["REGIONAL"]
+        },
+        "api_key_source": "HEADER"  
+    }
+}

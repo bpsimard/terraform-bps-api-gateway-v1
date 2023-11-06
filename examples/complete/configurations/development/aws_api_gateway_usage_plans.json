@@ -1,0 +1,21 @@
+{
+    "default": {
+        "name": "default",
+        "description": "Default usage plan for the deployment",
+        "product_code": "",
+        "stages": {
+            "development":
+            {
+                "name": "dev",
+                "api_gateway_key": "api-service"
+            }
+    },
+    "uages_plan_key_associations": {
+        "development": {
+            "api_key_id": "skseq00ubd"
+        }
+    },
+    "quota_settings": {},
+    "throttle_settings": {}
+    }
+}

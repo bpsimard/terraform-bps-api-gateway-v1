@@ -1,0 +1,14 @@
+{
+        "python-f5-port-reservation": {
+                "name": "python-f5-port-reservation",
+                "api_gateway_key": "api-service",
+                "environment": "development",
+                "deploy": true
+        },
+        "python-test": {
+                "name": "python-test",
+                "api_gateway_key": "api-service",
+                "environment": "development",
+                "deploy": true
+        }    
+}

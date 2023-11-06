@@ -1,0 +1,7 @@
+{
+    "devops_catalog": {
+        "name": "devops_catalog",
+        "description": "Key used for the DevOps catalog ",
+        "enabled": true
+    }
+}

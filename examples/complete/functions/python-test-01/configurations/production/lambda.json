@@ -1,0 +1,25 @@
+{
+    "function_name": null,
+    "function_description": "Reserves OMS port from an F5 device.",
+    "runtime": "python3.8",
+    "filename": "lambda.zip",
+    "handler": "reserve-f5-oms-port.lambda_handler",
+    "log_retention_in_days": 14,
+    "attach_network_policy": true,
+    "vpc_subnet_ids": ["subnet-0d911af561a9819b7","subnet-0c80a38f844cf1aa6"],
+    "vpc_security_group_ids": ["sg-03fa90b2e1d51acf7"],
+    "api_gateway_key": "tcf-service", 
+    "policy": null,
+    "environment_variables": {
+        "F5_BASE_URL" : "https://10.250.5.202/mgmt/tm/ltm/", 
+        "F5_NETWORKING_API_BASE_URL": "https://ec2-52-61-175-136.us-gov-west-1.compute.amazonaws.com",
+        "ENVIRONMENT_NAME" : "development",
+        "F5_SECRET_NAME": "f5/gov/production",
+        "DYNAMO_DB_TABLE_NAME": "development-f5-resource-reservation"
+    },
+    "timeout" : 300,
+    "layers": ["arn:aws:lambda:us-east-1:638050436593:layer:development-python-devops-ldap:5"],
+    "lambda_role_policy_attachments" : [
+        "arn:aws:iam::638050436593:policy/development-TCFAPI01-allow-f5-resource-reservation"
+    ]
+}

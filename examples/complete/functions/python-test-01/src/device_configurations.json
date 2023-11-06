@@ -1,0 +1,21 @@
+{
+    "uat_shared_services_gov":
+    {
+        "id": "uat_shared_services_gov",
+        "name": "",
+        "base_url": "https://ec2-3-30-50-213.us-gov-west-1.compute.amazonaws.com",
+        "allowed_port_range_max": 1499,
+        "allowed_port_range_min": 1400,
+        "excluded_ports": ["1400", "1401"]
+    },
+    "production_shared_services_gov":
+    {
+        "id": "production_shared_services_gov",
+        "name": "production_shared_services_gov",
+        "base_url": "https://ec2-52-61-175-136.us-gov-west-1.compute.amazonaws.com",
+        "allowed_port_range_max": 1499,
+        "allowed_port_range_min": 1400,
+        "excluded_ports": []
+        
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "lambda" : {
+        "function_name": null,
+        "function_description": "This is a default description",
+        "runtime": "python3.7",
+        "filename": "lambda.zip",
+        "handler": "lambda.lambda_handler",
+        "log_retention_in_days": 14,
+        "attach_network_policy": false,
+        "vpc_subnet_ids": [],
+        "vpc_security_group_ids": [],
+        "policy": null,
+        "environment_variables": { },
+        "timeout" : 120,
+        "layers": [],
+        "lambda_role_policy_attachments" : []
+    },
+    "sqs_queue" : {
+        "name": null,
+        "delay_seconds": 0,
+        "max_message_size": 2048,
+        "message_retention_seconds": 864000,
+        "receive_wait_time_seconds": 0,
+        "create_sqs_queue": false,
+        "existing_queue_arn":  null,
+        "policy": null,
+        "visibility_timeout_seconds": 900,
+        "sender_role_attachment_key": "",
+        "policy_principals" : [],
+        "redrive_policy" : {}
+    }
+}

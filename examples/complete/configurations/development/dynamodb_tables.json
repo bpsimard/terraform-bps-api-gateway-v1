@@ -1,0 +1,18 @@
+{
+    "api-service": {
+        "name": null,
+        "hash_key": "id",
+        "attributes": [
+            {
+                "name": "id",
+                "type": "S"
+            }
+        ],
+        "tags": [
+            {
+                "test": "1",
+                "test2": "2"
+            }
+        ]
+    }
+}

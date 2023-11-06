@@ -1,0 +1,1 @@
+{"filename": "builds/a8b128d5e97b1b267ff04ec30a58e5895027f688c2298174df70e92f3b221ebc.zip", "runtime": "python3.8", "artifacts_dir": "builds", "build_plan": [["zip", "../../../functions/python-add-aws-account-to-ermetic/src", null]]}

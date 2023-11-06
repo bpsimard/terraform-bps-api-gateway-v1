@@ -1,0 +1,39 @@
+{
+    "resource": {
+        "rest_api_id": null,
+        "parent_id": null,
+        "aws_api_gateway_rest_api_key": "",
+        "path_part": "{proxy+}",
+        "proxy": {
+
+        }
+    },
+    "method": {
+        "rest_api_id": null,
+        "resource_id": null,
+        "http_method": "",
+        "authorization": "NONE",
+        "integration": {
+            "rest_api_id": "",
+            "resource_id": "",
+            "http_method": "",
+            "integration_http_method": "",
+            "type": "",
+            "uri": ""
+        }
+    },
+    "lambda_integration": {
+        
+    },
+    "lambda_root": {
+
+    },    
+
+    "deployment": {
+        "rest_api_id": "",
+        "stage_name": ""
+    }
+
+
+
+}

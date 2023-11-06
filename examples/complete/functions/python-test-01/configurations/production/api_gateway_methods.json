@@ -1,0 +1,21 @@
+{
+    "post": {
+        "rest_api_id": null,
+        "rest_api_key": "tcf-service",
+        "resource_id": null,
+        "resource_key": "records",
+        "http_method": "POST",
+        "authorization": "NONE",
+        "api_key_required": true,
+        "integration": {
+            "rest_api_id": null,
+            "resource_id": null,
+            "http_method": "",
+            "integration_http_method": "POST",
+            "type": "AWS_PROXY",
+            "uri": null,
+            "function_name": null
+        },
+        "query_params": null
+    }
+}

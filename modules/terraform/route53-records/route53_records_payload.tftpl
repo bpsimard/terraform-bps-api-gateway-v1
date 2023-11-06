@@ -1,0 +1,33 @@
+[
+%{ for index, host_record in urls ~}
+{
+  "RecordName" : "${host_record}",
+  "RecordType" : "${record.type}",
+%{if record.alias == "false" ~}
+  "RecordValue" : "${record.value}",
+%{ endif ~}
+%{if record.alias == "" ~}
+  "RecordValue" : "${record.value}",
+%{ endif ~}
+%{if record.alias == "true" ~}
+  "RecordValue" : "",
+%{ endif ~}
+  "RecordTtl" : ${record.ttl}
+%{if record.alias == "true" ~}
+  ,
+  "AliasTarget": {
+    "HostedZoneId": "${record.zone_id}",
+    "DNSName": "${record.value}",
+    "EvaluateTargetHealth": ${record.evaluate_target_health}
+}
+%{ endif ~}
+}
+%{if urlcount != index + 1 ~}
+,
+%{ endif ~}
+%{ endfor ~}
+]
+
+
+
+

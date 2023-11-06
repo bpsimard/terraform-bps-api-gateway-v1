@@ -1,0 +1,14 @@
+[
+    {
+        "environment_name": "production",
+        "customer_id": "000000",
+        "port_number": 1406,
+        "device_id": "uat_shared_services_gov"
+    },
+    {
+        "environment_name": "stage",
+        "customer_id": "000000",
+        "port_number": 1407,
+        "device_id": "uat_shared_services_gov"
+    }
+]

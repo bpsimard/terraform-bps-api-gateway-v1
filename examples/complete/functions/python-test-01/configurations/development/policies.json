@@ -1,0 +1,145 @@
+{
+    "allow-f5-resource-reservation": {
+        "name": null,
+        "description": "Provides the access needed for F5 Reservation services.",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "DynamoDBIndexAndStreamAccess",
+                    "Effect": "Allow",
+                    "Action": [
+                        "dynamodb:GetShardIterator",
+                        "dynamodb:Scan",
+                        "dynamodb:Query",
+                        "dynamodb:DescribeStream",
+                        "dynamodb:GetRecords",
+                        "dynamodb:ListStreams"
+                    ],
+                    "Resource": [
+                        "arn:aws:dynamodb:us-east-1:638050436593:table/development-f5-resource-reservation/index/*",
+                        "arn:aws:dynamodb:us-east-1:638050436593:table/development-f5-resource-reservation/stream/*"
+                    ]
+                },
+                {
+                    "Sid": "DynamoDBTableAccess",
+                    "Effect": "Allow",
+                    "Action": [
+                        "dynamodb:BatchGetItem",
+                        "dynamodb:BatchWriteItem",
+                        "dynamodb:ConditionCheckItem",
+                        "dynamodb:PutItem",
+                        "dynamodb:DescribeTable",
+                        "dynamodb:DeleteItem",
+                        "dynamodb:GetItem",
+                        "dynamodb:Scan",
+                        "dynamodb:Query",
+                        "dynamodb:UpdateItem"
+                    ],
+                    "Resource": "arn:aws:dynamodb:us-east-1:638050436593:table/development-f5-resource-reservation"
+                },
+                {
+                    "Sid": "DynamoDBDescribeLimitsAccess",
+                    "Effect": "Allow",
+                    "Action": "dynamodb:DescribeLimits",
+                    "Resource": [
+                        "arn:aws:dynamodb:us-east-1:638050436593:table/development-f5-resource-reservation",
+                        "arn:aws:dynamodb:us-east-1:638050436593:table/development-f5-resource-reservation/index/*"
+                    ]
+                },
+                {
+                    "Sid": "SecretsManager",
+                    "Effect": "Allow",
+                    "Action": [
+                        "secretsmanager:GetSecretValue",
+                        "secretsmanager:DescribeSecret",
+                        "secretsmanager:ListSecretVersionIds"
+                    ],
+                    "Resource": [
+                        "arn:aws:secretsmanager:us-east-1:638050436593:secret:f5/gov/production-1jL9Ov"
+                    ]
+                }
+            ]
+        }
+    },
+    "allow-read-automation-lambda-test-secret": {
+        "name": null,
+        "description": "Provides the access needed for test secret.",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "SecretsManager",
+                    "Effect": "Allow",
+                    "Action": [
+                        "secretsmanager:GetSecretValue",
+                        "secretsmanager:DescribeSecret",
+                        "secretsmanager:ListSecretVersionIds"
+                    ],
+                    "Resource": [
+                        "arn:aws:secretsmanager:us-east-1:638050436593:secret:automation/lambda/test-LwIFyK"
+                    ]
+                }
+            ]
+        }
+    },
+    "allow-terraform-production-api-secret-access": {
+        "name": null,
+        "description": "Provides the access needed for test secret.",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "SecretsManager",
+                    "Effect": "Allow",
+                    "Action": [
+                        "secretsmanager:GetSecretValue",
+                        "secretsmanager:DescribeSecret",
+                        "secretsmanager:ListSecretVersionIds"
+                    ],
+                    "Resource": [
+                        "arn:aws:secretsmanager:us-east-1:638050436593:secret:tfc/production-rJwqhd"
+                    ]
+                }
+            ]
+        }
+    },
+    "allow-s3-bucket-access-api-gateway-publish": {
+        "name": null,
+        "description": "Provides the access needed for test secret.",
+        "policy": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "s3bucket",
+                    "Effect": "Allow",
+                    "Action": [
+                        "s3:DeleteObject",
+                        "s3:GetObject",
+                        "s3:ListObject",
+                        "s3:ListBucket",
+                        "s3:PutObject",
+                        "s3:*"
+                    ],
+                    "Resource": [
+                        "arn:aws:s3:::ccs-devops-api-gateway-definition-files",
+                        "arn:aws:s3:::ccs-devops-api-gateway-definition-files/*"
+                    ]
+                },
+                {
+                    "Sid": "apigateway",
+                    "Effect": "Allow",
+                    "Action": [
+                        "apigateway:DELETE",
+                        "apigateway:*",
+                        "apigateway:PUT",
+                        "apigateway:PATCH",
+                        "apigateway:POST",
+                        "apigateway:GET"
+                    ],
+                    "Resource": "*"
+                }
+            ]
+        }
+    }
+}

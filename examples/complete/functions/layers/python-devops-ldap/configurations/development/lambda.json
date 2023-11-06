@@ -1,0 +1,5 @@
+{
+    "name": null,
+    "compatible_runtimes": ["python3.6","python3.7","python3.8"],
+    "filename": "ldap-3-layer.zip"
+}

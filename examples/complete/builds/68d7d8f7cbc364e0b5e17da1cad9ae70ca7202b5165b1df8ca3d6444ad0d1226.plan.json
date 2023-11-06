@@ -1,0 +1,1 @@
+{"filename": "builds/68d7d8f7cbc364e0b5e17da1cad9ae70ca7202b5165b1df8ca3d6444ad0d1226.zip", "runtime": "dotnetcore3.1", "artifacts_dir": "builds", "build_plan": [["zip", "../../../functions/powershell-demote-user-from-domain-admin/src", null]]}
